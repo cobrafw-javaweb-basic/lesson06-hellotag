@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+	version="2.1">
+
+	<description>Cobra Framework - Java Web Basic</description>
+	<display-name>Custom Tag Demo</display-name>
+	<tlib-version>1.1</tlib-version>
+	<short-name>h</short-name>
+	<uri>http://cobrafw.io/jsp/custom/hello</uri>
+
+	<tag>
+		<description>Say hello to the world</description>
+		<name>hello</name>
+		<tag-class>io.cobrafw.javaweb.taglib.HelloTag</tag-class>
+		<body-content>empty</body-content>
+	</tag>
+
+	<tag>
+		<description>Greetings with some body</description>
+		<name>greetings</name>
+		<tag-class>io.cobrafw.javaweb.taglib.GreetingsTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<description>The name of person who we want to greet</description>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>The date format</description>
+			<name>dateFormat</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+</taglib>
